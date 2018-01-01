@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html ng-app="counter">
+  <head>
+    <title>AngularJS Counter</title>
+  </head>
+
+  <body ng-controller="CounterController as counter">
+    <p>Counter clicker:
+      <span>
+        {{counter.number}}
+        <input type="text" ng-model="counter.by"/>
+        <button id="incrementBy" ng-click="counter.increment(counter.by)">Increment By</button>
+        <button id="decrementBy" ng-click="counter.decrement(counter.by)">Decrement By</button>
+      </span>
+    </p>
+    <button id="increment" ng-click="counter.increment(1)">Increment</button>
+    <button id="decrement" ng-click="counter.decrement(1)">Decrement</button>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.js"></script>
+    <script src="app.js"></script>
+  </body>
+
+</html>
